@@ -1,10 +1,4 @@
-body {
-	background-color:rgba(255,255,255,1.00);
-                
-				background-image: url(../img/fondo-02.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-      }
+
 
 #navega #menu #fijo {  
     position:fixed;  

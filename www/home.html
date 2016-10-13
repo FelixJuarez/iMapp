@@ -13,7 +13,48 @@
    <!-- <link href="jquery-mobile/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css">
    -->
      <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <style type="text/css">
+<!--   
+#navega #menu #fijo {  
+    position:fixed;  
+            text-align:center;  
+			bottom:0px;                    /* Distancia hasta el borde superior */  
+    left: 0px;            /* Distancia hasta el borde izquierdo */ 
+        width:100%;     
+        z-index: 1;
+		height:70px;
+		background: -webkit-linear-gradient(transparent, transparent); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(transparent, transparent); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(transparent, transparent); /* For Firefox 3.6 to 15 */
+background: linear-gradient(transparent, transparent); /* Standard syntax */
+		
+}  
+
+.ico{
+	margin-top:50px
+}
+
+#contenedor {
+    background: url(img/fondo-02.png);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+
+#contenedor{
+   position:fixed;  
+            text-align:center;  
+			bottom:0px;                    /* Distancia hasta el borde superior */  
+    left: 0px;  	
+}
+</style>
      
     <title>iMapp</title>
     <script type="text/javascript" src="cordova.js"></script>
@@ -21,17 +62,39 @@
 <script src="jquery-mobile/jquery-1.11.1.min.js" type="text/javascript"></script>
 <!--<script src="jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>-->
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+       
+		$( document ).ready(function() {
+   $("#contenedor").css("display", "#block");
+   $("#contenedor").css("height", screen.height);
+   $("#contenedor").css("width", screen.width);
+   //$(window).height()
+});
+    </script>
 <script type="text/javascript" src="js/home.js"></script>
    
+   
+  
 </head>
 
-<body onload="laoad()" id="pagina" >
-<div class="col-xs-12" id="usuarios_res">
+<body  id="pagina" >
+<div id="contenedor"></div>
+            
+     <div>
+     	<div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div>
+        <div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div>
+        <div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div>
+        <div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div><div class='col-xs-3 ico'><img src='img/categorias/"+i+".jpg' width='100%' /></div>
+     </div>
+     
+     
+   
 
     
     
+    
+    
 
-</div>
  
 
 
