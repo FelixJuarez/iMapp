@@ -8,10 +8,10 @@
         width:100%;     
         z-index: 1;
 		height:70px;
-		background: -webkit-linear-gradient(white, transparent); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(white, transparent); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(white, transparent); /* For Firefox 3.6 to 15 */
-background: linear-gradient(white, transparent); /* Standard syntax */
+		background: -webkit-linear-gradient(white, white); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(white, white); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(white, white); /* For Firefox 3.6 to 15 */
+background: linear-gradient(white, white); /* Standard syntax */
 		
 }  
 

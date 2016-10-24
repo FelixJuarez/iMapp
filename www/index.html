@@ -1,120 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-   
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
- 
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    
-
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-   
-     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-<!--   
-#navega #menu #fijo {  
-    position:fixed;  
-            text-align:center;  
-			bottom:0px;                    /* Distancia hasta el borde superior */  
-    left: 0px;            /* Distancia hasta el borde izquierdo */ 
-        width:100%;  
-        background-color:rgba(0,0,0,0.47);   
-        z-index: 1;
-		height:70px;
-		
-}  
-body {
-    background: url(img/fondo-02.png);
-    background-repeat:repeat-y;
-    background-position:center center;
-    background-attachment:scroll;
-    background-size:100% 100%;
-}
-.ui-page {
-    background: transparent;
-}
-.ui-content{
-    background: transparent;
-}
-
-
-</style>
-
-    <title>Hello World</title>
-    <script type="text/javascript" src="cordova.js"></script>
-    
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
 <script src="jquery-mobile/jquery-1.11.1.min.js" type="text/javascript"></script>
-
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/pinchzoom.min.js"></script>
-<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
- <script type="text/javascript">
-        $(function () {
-            $('div.pinch-zoom').each(function () {
-                new RTP.PinchZoom($(this), {maxZoom:13});
-            });
-        })
-		
-		$( document ).ready(function() {
-  
-  function alerta(){
-	alert("Hol");  
-  }
-  
-  
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var w=1;
+$( document ).ready(function() {
+    ini = window.localStorage.getItem("ini");
+	
+	if(ini == null){
+				//creaDB();
+			
+			}else{
+			window.location = ("mapa.html");
+			}
+	
+	
+	
 });
-    </script>
-    <script type="text/javascript" src="js/dbrem2loc.js"></script>
+function cambiar(){
+	if(w==1){
+		$('#my_image').attr('src','img/Intro/Intro-page-002.jpg');
+		w=2;
+	}else if(w==2){
+		$('#my_image').attr('src','img/Intro/Intro-page-003.jpg');
+		w=3;
+	}else if(w==3){
+		$('#my_image').attr('src','img/Intro/Intro-page-004.jpg');
+		w=4;
+	}else if(w==4){
+		$('#my_image').attr('src','img/Intro/Intro-page-005.jpg');
+		w=5;
+	}else if(w==5){
+		window.localStorage.setItem("ini", 1);
+		window.location = ("mapa.html");
+	}
+	
+}
+	 
+</script>
 </head>
 
-<body onload="onLoad()">
-
- 
-
-
- <div class="pinch-zoom">
-            
-     <div style="display:block; height:4000px">
-     <img src="img/iMapp  4mil 300ppp.png" usemap="#Map" style="border:none">
-     <map name="Map" style="outline:none">
-       <area shape="rect" coords="957,44,1314,238" href="#" onClick="alerta()">
-     </map>
-     </div>
-     
-     
-   
-
-    
-    
-    
-    
-</div>
-
-
-<div id="navega" class="col-xs-12">  
-<div id="menu" class="col-xs-12">  
-<div id="fijo" class="col-xs-12">  
-
-     <div class="col-xs-4">
-     	<a href="home.html"><img src="img/marker.png" style="height:50px; margin-top:10px"></a>
-     </div>
-     <div class="col-xs-4">
-     Juarez
-     </div>
-     <a href="res3.html"><div class="col-xs-4">
-     Duran
-     </div>
-      </a> 
-</div>   
-</div>   
-</div>  
-            
-        
+<body style="background-color:rgba(255,255,255,1.00)">
+<img src="img/Intro/Intro-page-001.jpg" id="my_image" width="100%" height="100%" alt="" on onClick="cambiar()"/>
 </body>
-
 </html>
