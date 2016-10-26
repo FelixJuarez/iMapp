@@ -72,8 +72,8 @@ function pageloaded() {
 
     function onDeviceReady() {
 		
-		var ref = window.open('http://diarweb.com/imapp/memorama', '_blank', 'location=no');
-		
+		var ref = window.open('http://diarweb.com/imapp/memorama', '_system', 'location=no');
+		window.location = ("mapa.html");
 ref.addEventListener('exit', function() {
    	window.location = ("mapa.html");
 });
