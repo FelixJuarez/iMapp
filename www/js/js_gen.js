@@ -19,7 +19,9 @@ var ide=0;
 		conn="NO";
 	}
 }
-
+function regalos(){
+window.open('http://diarweb.com/imapp/memorama', '_system', 'location=no');	
+}
 function load_cat1() {			
 			
 			checkConnection();

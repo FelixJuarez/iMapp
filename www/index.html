@@ -23,7 +23,7 @@
 
 		$( document ).ready(function() {
 			
-	
+				so=device.platform;
 				$('#imageFullScreen').smartZoom({'containerClass':'zoomableContainer'});
 				
 				$('#topPositionMap,#leftPositionMap,#rightPositionMap,#bottomPositionMap').bind("click", moveButtonClickHandler);
@@ -451,7 +451,7 @@ background: linear-gradient(transparent, transparent); /* Standard syntax */
      	<a href="#home" data-transition="slide"><img  src="img/ima.png" style="height:70px; margin-top:5px" data-transition="slide"></a>
      </div>
      <div class="col-xs-4">
-     	<a href="regalos.html"><img src="img/regalo.png" style="height:70px; margin-top:5px"></a>
+     	<a onClick="regalos()"><img src="img/regalo.png" style="height:70px; margin-top:5px"></a>
      </div>
        
 </div>   
