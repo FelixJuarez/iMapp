@@ -1,34 +1,18 @@
 var cate=45;
 var ide=0;
-	 function checkConnection() {
-    var networkState = navigator.network.connection.type;
+	 var conn="YES";
+	 var so=device.platform;
 
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'YES';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'YES';
-    states[Connection.CELL_4G]  = 'YES';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
-
-    if(states[networkState]=="YES"){
-		conn="YES";
-	}else{
-		conn="NO";
-	}
-}
 function regalos(){
 window.open('http://diarweb.com/imapp/memorama', '_system', 'location=no');	
 }
 function load_cat1() {			
 			
-			checkConnection();
+		
 			
 			if(conn=="YES"){
 					
-				 $.getJSON('http:diarweb.com/respuestacatip.php?cat='+cate,function(data){
+				 $.getJSON('http://diarweb.com/respuestacatip.php?cat='+cate,function(data){
 					 $('#principal_cat').html(' ');
 			//alert("con si");
 					for (var i = 0; i < data.length; i++) {
@@ -57,11 +41,10 @@ function load_cat1() {
 
 function loadgaleria() {			
 			
-			checkConnection();
 			
 			if(conn=="YES"){
 					
-				 $.getJSON('http:diarweb.com/respuesta2ip.php?ide='+ide,function(data){
+				 $.getJSON('http://diarweb.com/respuesta2ip.php?ide='+ide,function(data){
 			//alert("con si");
 			 $('#prifotos').append(" <div class='col-xs-12'> <div onClick='parent.history.back();' style='color:rgba(95,95,95,1.00)'>&laquo; V O L V E R</div> </div>");
 					for (var i = 0; i < data.length; i++) {
@@ -88,11 +71,11 @@ function loadgaleria() {
 
 function load_detalle() {			
 			
-			checkConnection();
+	
 			
 			if(conn=="YES"){
 					
-				 $.getJSON('http:diarweb.com/respuestaip.php?ide='+ide,function(data){
+				 $.getJSON('http://diarweb.com/respuestaip.php?ide='+ide,function(data){
 			//alert("con si");
 					for (var i = 0; i < data.length; i++) {
 						if(data[i].idimapp == ide){
